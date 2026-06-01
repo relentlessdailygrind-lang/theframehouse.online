@@ -23,10 +23,10 @@ export default function ContactPage() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const res = await fetch('/', {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
       })
 
       if (res.ok) {
@@ -67,7 +67,14 @@ export default function ContactPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                name="inquiry"
+                method="POST"
+                data-netlify="true"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="inquiry" />
                 {/* Name row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
