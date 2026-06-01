@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" width="860" height="200">
+
+  <!-- Background (ink) -->
+  <rect width="860" height="200" fill="#1A1A1A"/>
+
+  <!-- THE -->
+  <text
+    x="430" y="68"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="15"
+    fill="#C9A96E"
+    text-anchor="middle"
+    letter-spacing="16">THE</text>
+
+  <!-- Frame House — main serif -->
+  <text
+    x="430" y="148"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="86"
+    fill="#FAF8F5"
+    text-anchor="middle"
+    font-style="italic">Frame House</text>
+
+  <!-- Gold rule below text -->
+  <line x1="190" y1="164" x2="670" y2="164" stroke="#C9A96E" stroke-width="1"/>
+
+  <!-- LLC note -->
+  <text
+    x="670" y="181"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="12"
+    fill="#C9A96E"
+    text-anchor="end"
+    letter-spacing="4">LLC</text>
+
+</svg>

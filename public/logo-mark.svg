@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#1A1A1A"/>
+
+  <!-- Outer thin border -->
+  <rect x="24" y="24" width="452" height="452" fill="none" stroke="#C9A96E" stroke-width="1"/>
+
+  <!-- Inner corner brackets (photo frame effect) -->
+  <polyline points="40,70 40,40 70,40"   fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="430,40 460,40 460,70" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="40,430 40,460 70,460" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="square"/>
+  <polyline points="430,460 460,460 460,430" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linecap="square"/>
+
+  <!-- THE -->
+  <text
+    x="250" y="196"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="16"
+    fill="#C9A96E"
+    text-anchor="middle"
+    letter-spacing="14">THE</text>
+
+  <!-- Frame — main serif wordmark -->
+  <text
+    x="250" y="278"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="82"
+    fill="#FAF8F5"
+    text-anchor="middle"
+    font-style="italic">Frame</text>
+
+  <!-- Gold rule -->
+  <line x1="148" y1="298" x2="352" y2="298" stroke="#C9A96E" stroke-width="0.75"/>
+
+  <!-- HOUSE -->
+  <text
+    x="250" y="333"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="16"
+    fill="#C9A96E"
+    text-anchor="middle"
+    letter-spacing="14">HOUSE</text>
+
+</svg>
