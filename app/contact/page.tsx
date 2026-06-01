@@ -21,12 +21,13 @@ export default function ContactPage() {
 
     const form = e.currentTarget
     const data = new FormData(form)
+    const body = Object.fromEntries(data.entries())
 
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
       })
 
       if (res.ok) {
