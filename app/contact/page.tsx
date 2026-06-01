@@ -22,10 +22,11 @@ export default function ContactPage() {
     const form = e.currentTarget
     const data = new FormData(form)
     try {
-      const res = await fetch('/', {
+      const body = Object.fromEntries(data.entries())
+      const res = await fetch('/.netlify/functions/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
       })
 
       if (res.ok) {
