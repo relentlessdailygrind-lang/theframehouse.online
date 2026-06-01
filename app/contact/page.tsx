@@ -198,7 +198,7 @@ export default function ContactPage() {
 
                 {status === 'error' && (
                   <p className="text-sm text-red-500">
-                    Something went wrong. Please email us directly at hello@theframehouse.com
+                    Something went wrong. Please email us directly at hello@theframehouse.online
                   </p>
                 )}
 
@@ -212,8 +212,8 @@ export default function ContactPage() {
 
                 <p className="text-xs text-muted">
                   We respond within 24 hours. For urgent inquiries, email{' '}
-                  <a href="mailto:hello@theframehouse.com" className="text-ink underline">
-                    hello@theframehouse.com
+                  <a href="mailto:hello@theframehouse.online" className="text-ink underline">
+                    hello@theframehouse.online
                   </a>
                 </p>
               </form>

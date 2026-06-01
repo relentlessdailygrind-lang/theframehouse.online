@@ -25,8 +25,8 @@ export default function Footer() {
             <p className="text-xs tracking-widest uppercase text-muted mb-5">Contact</p>
             <div className="flex flex-col gap-3">
               <p className="text-sm text-cream/60">Great Lakes Bay Region, MI</p>
-              <a href="mailto:hello@theframehouse.com" className="text-sm text-cream/60 hover:text-cream transition-colors">
-                hello@theframehouse.com
+              <a href="mailto:hello@theframehouse.online" className="text-sm text-cream/60 hover:text-cream transition-colors">
+                hello@theframehouse.online
               </a>
               <div className="flex gap-4 mt-2">
                 <a href="#" className="text-xs tracking-widest uppercase text-cream/40 hover:text-gold transition-colors">Instagram</a>
