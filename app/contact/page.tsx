@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const eventTypes = [
   'Wedding',
@@ -22,19 +23,24 @@ export default function ContactPage() {
     const form = e.currentTarget
     const data = new FormData(form)
     try {
-      const body = Object.fromEntries(data.entries())
-      const res = await fetch('/.netlify/functions/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      })
-
-      if (res.ok) {
-        setStatus('sent')
-        form.reset()
-      } else {
-        setStatus('error')
-      }
+      await emailjs.send(
+        'service_do07cx3',
+        'template_putcczn',
+        {
+          firstName: data.get('firstName'),
+          lastName: data.get('lastName'),
+          email: data.get('email'),
+          phone: data.get('phone') || '—',
+          eventType: data.get('eventType'),
+          eventDate: data.get('eventDate') || '—',
+          hours: data.get('hours') || 'Not sure yet',
+          venue: data.get('venue') || '—',
+          message: data.get('message') || '—',
+        },
+        '_xic--eF3G6uGSFea'
+      )
+      setStatus('sent')
+      form.reset()
     } catch {
       setStatus('error')
     }
