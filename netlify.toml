@@ -1,2 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
 [plugins.inputs]
   NETLIFY_NEXT_PLUGIN_SKIP = true
